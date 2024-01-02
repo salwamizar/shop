@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!--<title> Image Gallery with Lightbox | CodingLab </title>-->
+        <link rel="stylesheet" href="styleinfo.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Fontawesome CDN Link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+        
+       </head>
+<body>
+      <nav>
+          <div class="wrapper">
+              <div class="menu">
+                  <ul>
+                      <li><div class="logo"><img src="logo.png" width="75px" height="75px"/></div></li>
+                      <li><div class="logo"><a href="index.html">MizarFlorist</a></div></li>
+                      <li><a href="#home">HOME</a></li>
+                      <li><a href="#menu">MENU</a></li>
+                      <li><a href="#gallery">GALLERY</a></li>
+                      <li><a href="#aboutus">ABOUT US</a></li>
+                      <li><a href="#contact">CONTACT</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+    <div class="wrapper">
+      <img src="sample1.jpg" width="100%" height="350">
+      <!-- untuk home -->
+      <section id="home">
+
+    <!-- untuk gallery -->
+    <section id="menu">
+        <div class="galeri">
+            <div class="container">
+                <h2 align="center"><br>OUR PRODUCT AND GALLERY</h2>
+                <div>
+                    <iframe src="slidecardbuatgaleri.html" width="100%" height="450" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- untuk about us -->
+    <section id="aboutus">
+        <div class="tengah">
+            <div class="kolom">
+                <p class="deskripsi">Info Tentang Kami</p>
+                <h2>Tujuan</h2>
+                <p>Didirikan pada tahun 201x oleh seorang mahasiswi <br> kemudian toko ini diresmikan pada tanggal x juni 202x</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="contact">
+        <div class="wrapper">
+            <div class="footer">
+                <div class="footer-section">
+                    <h3>MizarFlorist</h3>
+                    <p>didirikan pada tahun 201x<br> diresmikan pada tahun 202x</p>
+                </div>
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Didirikan pada tahun 201x oleh seorang mahasiswi <br> kemudian toko ini diresmikan pada tanggal x juni 202x</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Jl.ABCDEF <br>Kode Pos: 12345<br> atau hubungi: +62 xxx-xxxx-xxxx</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Social</h3>
+                    <p><b>YouTube: 28Salwa Az-zahra Mizar</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="copyright">
+        <div class="wrapper">
+            &copy; 2022. <b>28 Salwa Az-zahra Mizar</b> All Right Reserved.
+        </div>
+    </div>
+
+    <script>
+    
+        let body = document.querySelector("body"),
+            lightBox = document.querySelector(".lightBox"),
+            img = document.querySelectorAll(".gImg"),
+            showImg = lightBox.querySelector(".showImg img"),
+            close = lightBox .querySelector(".close");
+      
+           for (let image of img) {
+             image.addEventListener("click", ()=>{
+               showImg.src = image.src;
+               lightBox.style.display = "block";
+               body.style.overflow = "hidden";
+               close.onclick = ()=>{
+                 lightBox.style.display = "none";
+                 body.style.overflow = "visible";
+               };
+             });
+           }
+      
+        </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pembelian</title>
+<body>
+    
+    <script>
+
+        var jawab = prompt("Warna/Varian produk yang akan dibeli");
+        var hadiah = "";
+        
+        switch(jawab){
+            case "merah":
+                hadiah = "terima kasih sudah berbelanja di toko kami <3";
+                break;
+            case "putih":
+                hadiah = "terima kasih sudah berbelanja di toko kami <3";
+                break;
+            case "kuning":
+                hadiah = "terima kasih sudah berbelanja di toko kami <3";
+                break;
+            case "putih + ungu":
+                hadiah = "terima kasih sudah berbelanja di toko kami <3";
+                break;
+            case "putih + biru":
+                hadiah = "terima kasih sudah berbelanja di toko kami <3";
+                break;
+            case "custom":
+                hadiah = "terima kasih sudah berbelanja di toko kami <3";
+                break;
+            default:
+                document.write("<p>Opps! warna yang anda pilih tidak tersedia</p>");
+        }
+
+        if(hadiah === ""){
+            document.write("<p>Pembelian gagal</p>");
+        } else {
+            document.write("<h2>Pesanan anda berhasil dibayar dan pesanan anda sedang diproses, " + hadiah + "</h2>");
+        }
+    </script>
+</body>
+</html>
